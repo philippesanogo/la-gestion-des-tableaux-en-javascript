@@ -34,9 +34,55 @@ tab.splice(4, 1, "hi");
 // affiche le tableau sous forme de tableau
 console.table(tab);
 
+console.log("-----------");
+
+
 // affiche le tableau dans la console
 console.log(tab);
 
 // affiche la longueur du tableau
 let longueurTab = tab.length;
 console.log(longueurTab);
+
+console.log("-----------");
+
+
+
+
+/**
+ * Parcourir le tableau "tab"
+ */
+
+// méthode 1:
+console.log(`Parcourir le tableau "tab" ci-dessous:`);
+console.log(`méthode 1. "for()"`);
+for (let index = 0; index < tab.length; index++) {
+    const element = tab[index];
+    console.log(element);
+
+}
+
+
+// méthode 2
+console.log("-----------");
+console.log(`méthode 2. "foreach()"`);
+tab.forEach((elem) => {
+    console.log(elem);
+})
+
+
+// méthode 3
+console.log("-----------");
+console.log(`méthode 3. "for...in"`);
+
+for (let elem in tab) {
+    console.log(tab[elem]);
+}
+
+// méthode 4
+console.log("-----------");
+console.log(`méthode 4. "for...of"`);
+for(let valeur of tab){
+    console.log(valeur);
+}
+
