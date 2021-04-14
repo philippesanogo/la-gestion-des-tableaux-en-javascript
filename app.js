@@ -54,6 +54,7 @@ console.log("-----------");
  */
 
 // méthode 1:
+// méthode classique pour parcourir le tableau
 console.log(`Parcourir le tableau "tab" ci-dessous:`);
 console.log(`méthode 1. "for()"`);
 for (let index = 0; index < tab.length; index++) {
@@ -64,14 +65,16 @@ for (let index = 0; index < tab.length; index++) {
 
 
 // méthode 2
+// permet de récupérer l'index et la valeur
 console.log("-----------");
 console.log(`méthode 2. "foreach()"`);
-tab.forEach((elem) => {
-    console.log(elem);
+tab.forEach((elem, index) => {
+    console.log(index, elem);
 })
 
 
 // méthode 3
+// à utiliser avec les objets plutôt
 console.log("-----------");
 console.log(`méthode 3. "for...in"`);
 
@@ -80,6 +83,7 @@ for (let elem in tab) {
 }
 
 // méthode 4
+// récupère la valeur et pas l'index
 console.log("-----------");
 console.log(`méthode 4. "for...of"`);
 for(let valeur of tab){
