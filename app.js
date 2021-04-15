@@ -131,3 +131,19 @@ let newTabNumbers = tab.filter(number => {
 
 console.table(newTabNumbers);
 
+
+console.log("-----------");
+/**
+ * parcourir le tableau et en extraire des portions avec la methode entries()
+ */
+console.log(`parcourir le tableau et en extraire des portions avec la methode entries():`);
+
+let newTabIterator = tab.entries();
+// console.log(newTabIterator);
+
+// j'extrais l'index 0 et sa valeur = 12.5
+let miniTab = newTabIterator.next().value;
+console.log(miniTab);
+
+miniTab = newTabIterator.next().value;
+console.log(miniTab);
