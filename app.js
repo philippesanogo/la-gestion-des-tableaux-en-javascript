@@ -86,7 +86,48 @@ for (let elem in tab) {
 // récupère la valeur et pas l'index
 console.log("-----------");
 console.log(`méthode 4. "for...of"`);
-for(let valeur of tab){
+for (let valeur of tab) {
     console.log(valeur);
 }
+
+console.log("-----------");
+console.log(`Transformer un tableau avec la méthode map():`);
+
+/**
+ * Transformer un tableau
+ */
+
+// méthode "map()"
+let newTab = tab.map((valeur, index) => {
+    if (!isNaN(valeur)) { // j'utilse if pour afficher les index des nombres
+
+        return `${index} - ${valeur}`;
+
+    } else {
+
+        return `${valeur}`;
+
+    }
+})
+// affiche sous forme de tableau dans la console
+console.table(newTab);
+
+console.log("-----------");
+// méthode "filter()"
+console.log(`Transformer un tableau avec la méthode filter():`);
+console.log(`Dans cette exemple, je retourne un tableau avec seulement des chaines de caracteres:`);
+
+let newTabText = tab.filter(elemText => {
+    return isNaN(elemText);
+})
+
+console.table(newTabText);
+
+console.log(`Dans l'exemple ci-dessous, je retourne un tableau avec seulement des chiffres:`);
+
+let newTabNumbers = tab.filter(number => {
+    return !isNaN(number);
+})
+
+console.table(newTabNumbers);
 
